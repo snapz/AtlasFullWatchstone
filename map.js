@@ -32,15 +32,15 @@ var isLarge = true;
 var shouldDraw = true;
 atlasTracker = localStorage;
 
-mapImg.src = './Images/Atlas.jpg';
-tiersImg.src = './Images/AtlasTier.png'
-namesImg.src = './Images/AtlasNames.png';
-uniquesImg.src = './Images/AtlasUnique.png';
-upgradesImg.src = './Images/AtlasUpgrades.png';
-smallNamesImg.src = './Images/AtlasNamesSmall.png';
-smallUniquesImg.src = './Images/AtlasUniquesSmall.png';
-selectedImg.src = './Images/Selected.png';
-completedImg.src = './Images/Completed.png'
+mapImg.src = 'Images/Atlas.jpg';
+tiersImg.src = 'Images/AtlasTier.png'
+namesImg.src = 'Images/AtlasNames.png';
+uniquesImg.src = 'Images/AtlasUnique.png';
+upgradesImg.src = 'Images/AtlasUpgrades.png';
+smallNamesImg.src = 'Images/AtlasNamesSmall.png';
+smallUniquesImg.src = 'Images/AtlasUniquesSmall.png';
+selectedImg.src = 'Images/Selected.png';
+completedImg.src = 'Images/Completed.png'
 // Screen variables
 var zoomValue = 1;
 var originX = 0;
