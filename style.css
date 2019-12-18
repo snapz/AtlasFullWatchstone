@@ -1,0 +1,434 @@
+
+body{
+    font-size: 100%;
+    cursor:default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+canvas {
+    position: absolute;
+    z-index: 1;
+  }
+input[type=text] {
+    font-size: 2vh;
+    position: absolute;
+    text-align:center;
+    z-index: 2;
+    width: 20vw;
+    height: 3vh;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    top: 97%;
+    padding: 0px 20px 0px 40px;
+    border-radius: 1.5vh;
+    background-color: black;
+    color: #A9A9A9;
+    border-color: #A9A9A9;
+    border-style: solid;
+}
+
+input:focus {
+    outline: none;
+}
+p{
+    font-size: 2vh;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+p[id="systemText"]{
+    top: 92%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+
+button{
+    position: absolute;
+    z-index: 2;
+    cursor:pointer;
+}
+
+button[id="save"]:hover{
+    background-color:#A9A9A9;
+    color: black;
+}
+button[id="save"]:active{
+    background-color:white;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 12px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media all and (orientation:portrait) {
+    .dropbtn {
+        background-color: black;
+        color: transparent;
+        padding: 0.5vw;
+        font-size: 1.4vh;
+        border-radius: 1.5vh;
+        overflow: hidden;
+
+        border: none;
+        cursor: pointer;
+        border-width: 2px;
+        border-color: #A9A9A9;
+        border-style: solid;
+    }
+
+    .dropdown .background {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        background-image: url("./Images/Settings.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 1%;
+        top: 93%;
+        width: 3vh;
+        height: 3vh;
+
+    }
+
+    .dropdown .background{
+        cursor: pointer;
+    }
+
+    .dropdown:hover .background{
+       -webkit-transform: rotate(90deg);
+       transition-duration: .5s;
+    }
+
+    .dropdown:not(:hover) .background{
+       -webkit-transform: rotate(-90deg);
+       transition-duration: .5s;
+    }
+
+
+    .dropdown {
+        display: inline-block;
+        position: absolute;
+
+        z-index:2;
+        left: 1%;
+        top: 95%;
+
+    }
+
+    .dropdown .dropbtn{
+       cursor: pointer;
+       transition: all .5s;
+       transition-delay: 0.25s;
+       width: 3vh;
+       height: 3vh;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        bottom: 0;
+        width: 25vw;
+        visibility: hidden;
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(2em);
+        -webkit-transition: all .25s ease;
+           -moz-transition: all .25s ease;
+                transition: all .25s ease;
+    }
+
+    .dropdown-content .btn {
+        cursor: pointer;
+        color: #A9A9A9;
+        height: 2vh;
+        background-color: black;
+        padding: 2vh 4vw 2vh 1vw;
+        border-width: thin;
+        border-color: #A9A9A9;
+        border-style: solid;
+        font-size: 1.4vh;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content .btn:hover {
+        background-color: #A9A9A9;
+        color:black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        transition-delay: .5s;
+        transform: translateY(0%);
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown:hover .dropbtn {
+        transition: all .5s;
+        border-radius: 0 0 1.5vh 1.5vh;
+        color: #A9A9A9;
+        width: 25vw;
+    }
+
+    input[id="mapCheckbox2"]{
+        top: 50%;
+        left: 90%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    button[id="save"]{
+        top: 2.5%;
+        left: 50%;
+        margin-right: -50%;
+        color: #A9A9A9;
+        background-color: black;
+        font-size: 2vh;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        border-radius: 1.5vh;
+        border-style:solid;
+        border-color: #A9A9A9;
+        width: 10vh;
+        height: 3vh;
+        transform: translate(-50%, -50%);
+        outline: none;
+    }
+
+}
+
+@media all and (orientation:landscape) {
+
+    .dropbtn {
+        background-color: black;
+        color: transparent;
+        padding: 0.5vw;
+        font-size: 1.8vh;
+        border-radius: 1.5vw;
+        overflow: hidden;
+
+        border: none;
+        cursor: pointer;
+        border-width: 2px;
+        border-color: #A9A9A9;
+        border-style: solid;
+    }
+
+    .dropdown .background {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        background-image: url("./Images/Settings.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 1%;
+        top: 93%;
+        width: 3vw;
+        height: 3vw;
+
+    }
+
+    .dropdown .background{
+        cursor: pointer;
+    }
+
+    .dropdown:hover .background{
+       -webkit-transform: rotate(90deg);
+       transition-duration: .5s;
+    }
+
+    .dropdown:not(:hover) .background{
+       -webkit-transform: rotate(-90deg);
+       transition-duration: .5s;
+    }
+
+
+    .dropdown {
+        display: inline-block;
+        position: absolute;
+
+        z-index:2;
+        left: 1%;
+        top: 93vh;
+
+    }
+
+    .dropdown .dropbtn{
+       cursor: pointer;
+       transition: all .5s;
+       transition-delay: 0.25s;
+       width: 3vw;
+       height: 3vw;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        bottom: 0;
+        width: 14vw;
+        visibility: hidden;
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(2em);
+        -webkit-transition: all .25s ease;
+           -moz-transition: all .25s ease;
+                transition: all .25s ease;
+    }
+
+    .dropdown-content .btn {
+        cursor: pointer;
+        color: #A9A9A9;
+        height: 2.5vh;
+        background-color: black;
+        padding: 2vh 4vw 2vh 1vw;
+        border-width: thin;
+        border-color: #A9A9A9;
+        border-style: solid;
+        font-size: 1.8vh;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content .btn:hover {
+        background-color: #A9A9A9;
+        color:black;
+    }
+
+    .dropdown:hover .dropdown-content {
+        transition-delay: .5s;
+        transform: translateY(0%);
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .dropdown:hover .dropbtn {
+        transition: all .5s;
+        border-radius: 0 0 1.5vw 1.5vw;
+        color: #A9A9A9;
+        width: 14vw;
+    }
+
+    button[id="save"]{
+        top: 2.5%;
+        left: 50%;
+        margin-right: -50%;
+        color: #A9A9A9;
+        background-color: black;
+        font-size: 2vh;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        border-radius: 1.5vh;
+        border-style:solid;
+        border-color: #A9A9A9;
+        width: 6vw;
+        height: 3vh;
+        transform: translate(-50%, -50%);
+        outline: none;
+    }
+}
+
+[id="mapCheckboxSlider"]{
+    position:absolute;
+    top: 12.5%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-100%, -100%);
+}
+
+[id="tierCheckboxSlider"]{
+    position:absolute;
+    top: 32.5%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-100%, -100%);
+}
+
+[id="uniqueCheckboxSlider"]{
+    position:absolute;
+    top: 52.5%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-100%, -100%);
+}
+
+[id="upgradesCheckboxSlider"]{
+    position:absolute;
+    top: 72.5%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-100%, -100%);
+}
+
+[id="largeTextCheckboxSlider"]{
+    position:absolute;
+    top: 92.5%;
+    left: 90%;
+    margin-right: -50%;
+    transform: translate(-100%, -100%);
+}
