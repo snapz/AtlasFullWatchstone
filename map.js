@@ -665,37 +665,8 @@ window.onload = function () {
     draw();
 };
 
-
+/* Tool to capture pos */
 /*
-function getCursorPosition(canvas, event) {
-    const rect = canvas.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
-    console.log("x: " + x + " y: " + y)
-}
-
-canvas.addEventListener('mousedown', function(e) {
-    getCursorPosition(canvas, e)
-})
-*/
-
-
-
-
-
-
-/*
-  function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
-    return {
-      x: evt.clientX - rect.left,
-      y: evt.clientY - rect.top
-    };
-  }
-
-*/
-
-
   function getMousePos(canvas, evt, zoomValue) {
     var rect = canvas.getBoundingClientRect();
     return {
@@ -712,35 +683,11 @@ var contextTest = canvas.getContext('2d');
     console.log(message);
     document.getElementById("search").value = message;
   }, false);
-
-
-/*
-    buttons.push(new Button("Malformation", 1, 0.1768, 0.1602));
-    buttons.push(new Button("Precinct", 1, 0.235, 0.146));
-    buttons.push(new Button("Dig", 1, 0.288, 0.139));
-    buttons.push(new Button("Leyline", 1, 0.405, 0.139));
-    buttons.push(new Button("Conservatory", 1, 0.355, 0.17));
-    buttons.push(new Button("Grotto", 1, 0.291, 0.203));
-    buttons.push(new Button("Vaults of atziri", 1, 0.3372, 0.192));
-    buttons.push(new Button("Vaal pyramid", 1, 0.3475, 0.225));
-    buttons.push(new Button("Shrine", 1, 0.1725, 0.251));
-    buttons.push(new Button("Chateau", 1, 0.174, 0.312));
-    buttons.push(new Button("Perandus manor", 1, 0.1767, 0.360));
 */
 
-
-
-
-
-
-
-
-
-
-
-
-    showNames = false;
-    showTiers = false;
-    showUniques = false;
-    showUpgrades = false;
-    isLarge = false;
+/* Force settings temp */
+showNames = false;
+showTiers = false;
+showUniques = false;
+showUpgrades = false;
+isLarge = false;
